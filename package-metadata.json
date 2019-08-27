@@ -1,0 +1,7 @@
+{
+    "name": "container-pipeline",
+    "version": "0.1.0",
+    "author": "ztrank",
+    "repository": "https://github.com/ztrank/azimuth-container-pipeline.git",
+    "directory": "src/interfaces"
+}

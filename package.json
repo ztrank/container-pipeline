@@ -1,0 +1,46 @@
+{
+  "devDependencies": {
+    "@babel/preset-typescript": "^7.3.3",
+    "@babel/core": "^7.5.5",
+    "@babel/preset-env": "^7.5.5",
+    "tslint": "^5.19.0",
+    "@types/jest": "^24.0.18",
+    "@types/node": "^12.7.2",
+    "typescript": "^3.5.3",
+    "ts-jest": "^24.0.2",
+    "jest": "^24.9.0"
+  },
+  "files": [
+    "dist/**/*"
+  ],
+  "types": "dist/index.d.ts",
+  "bugs": {
+    "url": "https://github.com/ztrank/container-pipeline/issues"
+  },
+  "repository": {
+    "url": "https://github.com/ztrank/container-pipeline.git",
+    "type": "git"
+  },
+  "name": "container-pipeline",
+  "version": "0.0.0",
+  "author": "ztrank",
+  "dependencies": {
+    "inversify": "^5.0.1",
+    "reflect-metadata": "^0.1.13",
+    "rxjs": "^6.5.2"
+  },
+  "description": "",
+  "homepage": "https://github.com/ztrank/container-pipeline#readme",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "rmdir dist /s /q && tsc",
+    "postversion": "git push && git push --tags",
+    "prepublishOnly": "npm test && npm run build && npm run lint",
+    "version": "git add -A src",
+    "lint": " tslint -p tsconfig.json",
+    "test": "jest",
+    "preversion": "npm test && npm run build && npm run lint",
+    "prepare": ""
+  },
+  "license": "MIT"
+}
